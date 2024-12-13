@@ -1,5 +1,8 @@
 const initialState = {
-  currentSong: null
+  currentSong: null,
+  favourites: {
+    content: []
+  }
 };
 
 const mainReducer = (state = initialState, action) => {
@@ -8,6 +11,22 @@ const mainReducer = (state = initialState, action) => {
       return {
         ...state,
         currentSong: action.payload
+      };
+    case "ADD_TO_FAVOURITES":
+      return {
+        ...state,
+        favourites: {
+          ...state.favourites,
+          content: [...state.favourites.content, action.payload]
+        }
+      };
+    case "REMOVE_FROM_FAVOURITE":
+      return {
+        ...state,
+        favourites: {
+          ...state.favourites,
+          content: state.favourites.content.filter((favSong) => favSong !== action.payload)
+        }
       };
     default:
       return state;
