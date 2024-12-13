@@ -1,0 +1,13 @@
+#sidebar {
+  height: 100vh;
+}
+.nav-btn {
+  margin-top: auto;
+}
+.login-btn {
+  background-color: black;
+  padding-inline: 80px;
+}
+.signup-btn {
+  padding-inline: 80px;
+}

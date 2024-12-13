@@ -8,10 +8,10 @@ function App() {
   return (
     <Container fluid>
       <Row>
-        <Col md={2}>
+        <Col md={2} className="p-0">
           <Sidebar />
         </Col>
-        <Col md={10}>
+        <Col md={10} className="p-0">
           <MainContainer />
         </Col>
       </Row>
