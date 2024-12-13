@@ -11,3 +11,17 @@
 .signup-btn {
   padding-inline: 80px;
 }
+
+/*playerbar*/
+.bg-container {
+  height: 5.5rem;
+  background-color: #282828;
+  margin-top: auto;
+}
+.progress {
+  color: white;
+  background-color: #414141;
+  height: 3px;
+  max-width: 350px;
+  margin-inline: auto;
+}

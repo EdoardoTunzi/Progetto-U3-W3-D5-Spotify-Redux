@@ -3,7 +3,7 @@ import Playerbar from "./Playerbar";
 
 const MainContainer = () => {
   return (
-    <div>
+    <div className="flex-column">
       <MainView />
       <Playerbar />
     </div>
