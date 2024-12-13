@@ -1,6 +1,7 @@
 import { Col, Row } from "react-bootstrap";
 import { Heart, HeartFill } from "react-bootstrap-icons";
 import { useDispatch, useSelector } from "react-redux";
+import { addToFavourites, addToPlayer, removeFromFavourites } from "../redux/actions";
 
 const SongsGrid = ({ songsArray, title }) => {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const SongsGrid = ({ songsArray, title }) => {
                     src={song.album.cover_medium}
                     alt={song.title}
                     onClick={() => {
-                      dispatch({ type: "ADD_TO_PLAYER", payload: song });
+                      dispatch(addToPlayer(song));
                     }}
                   />
                   <p>
@@ -29,13 +30,13 @@ const SongsGrid = ({ songsArray, title }) => {
                   {!favourites.includes(song.title) ? (
                     <Heart
                       onClick={() => {
-                        dispatch({ type: "ADD_TO_FAVOURITES", payload: song.title });
+                        dispatch(addToFavourites(song.title));
                       }}
                     />
                   ) : (
                     <HeartFill
                       onClick={() => {
-                        dispatch({ type: "REMOVE_FROM_FAVOURITE", payload: song.title });
+                        dispatch(removeFromFavourites(song.title));
                       }}
                     />
                   )}
