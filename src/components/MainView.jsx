@@ -5,7 +5,7 @@ import SongsGrid from "./SongsGrid";
 const MainView = () => {
   const [rock, setRock] = useState([]);
   const [pop, setPop] = useState([]);
-  const [classic, setClassic] = useState([]);
+  const [hipHop, setHipPop] = useState([]);
 
   const fillMusicSection = async (artistName, setState) => {
     try {
@@ -28,8 +28,8 @@ const MainView = () => {
 
   useEffect(() => {
     fillMusicSection("queen", setRock);
-    fillMusicSection("pop", setPop);
-    fillMusicSection("classical", setClassic);
+    fillMusicSection("katy perry", setPop);
+    fillMusicSection("eminem", setHipPop);
   }, []);
 
   return (
@@ -45,7 +45,7 @@ const MainView = () => {
       </Row>
       <SongsGrid songsArray={rock} title={"Rock Classics"} />
       <SongsGrid songsArray={pop} title={"Pop Culture"} />
-      <SongsGrid songsArray={classic} title={"Classical music"} />
+      <SongsGrid songsArray={hipHop} title={"HipHop"} />
     </Container>
   );
 };
