@@ -1,12 +1,14 @@
 const initialState = {
-  value: 0
-  /*cart: {
-        content: []
-        } esempio lezione*/
+  currentSong: null
 };
 
 const mainReducer = (state = initialState, action) => {
   switch (action.type) {
+    case "ADD_TO_PLAYER":
+      return {
+        ...state,
+        currentSong: action.payload
+      };
     default:
       return state;
   }
