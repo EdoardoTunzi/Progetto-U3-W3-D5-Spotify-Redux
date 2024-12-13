@@ -12,11 +12,11 @@ const MainView = () => {
       let response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=" + artistName);
       if (response.ok) {
         let result = await response.json();
-        console.log(result); // Log per vedere la struttura dei dati
+        console.log(result);
         if (result && result.data) {
-          setState(result.data); // Imposta lo stato con i dati delle canzoni
+          setState(result.data);
         } else {
-          console.log("Dati non trovati o struttura errata");
+          console.log("Error: data not found");
         }
       } else {
         throw new Error("Error in fetching songs");
