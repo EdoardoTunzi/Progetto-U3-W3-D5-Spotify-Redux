@@ -3,7 +3,7 @@ import Playerbar from "./Playerbar";
 
 const MainContainer = () => {
   return (
-    <div className="d-flex flex-column mainContainer" style={{ height: "100vh" }}>
+    <div className="d-flex flex-column mainContainer">
       <MainView />
       <Playerbar />
     </div>

@@ -3,7 +3,7 @@ import { PlayFill, Repeat, Shuffle, SkipBackwardFill, SkipForwardFill } from "re
 
 const Playerbar = () => {
   return (
-    <Container fluid className="bg-container flex-column justify-content-center">
+    <Container fluid className="bg-container sticky-bottom flex-column justify-content-center">
       <div className="d-flex justify-content-center align-items-center fs-4 playerControls">
         <Shuffle className="text-secondary me-4" />
         <SkipBackwardFill className="text-secondary me-4" />

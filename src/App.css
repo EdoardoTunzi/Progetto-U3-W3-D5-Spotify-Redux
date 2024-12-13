@@ -1,5 +1,14 @@
-#sidebar {
-  height: 100vh;
+.navbar.fixed-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  background-color: black;
+  z-index: 1200;
 }
 .nav-btn {
   margin-top: auto;

@@ -3,7 +3,7 @@ import { BookFill, HouseDoorFill } from "react-bootstrap-icons";
 
 const Sidebar = () => {
   return (
-    <Navbar bg="black" expand="md" className="flex-column align-items-center p-3" id="sidebar">
+    <Navbar bg="black" expand="md" className="flex-column align-items-center p-3 navbar fixed-left" id="sidebar">
       <div className="container flex-column align-items-start">
         <Navbar.Brand className="mb-4">
           <img src="/src/assets/logo/logo.png" alt="Spotify Logo" width="131" height="40" />
